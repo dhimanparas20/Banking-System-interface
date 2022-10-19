@@ -7,7 +7,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <style>
     body {
-      background-image: url('https://fiduciarygovernanceblog.com/wp-content/uploads/2021/02/Triangle-Neon-Shape-GettyImages-1180473594-2048x1146.jpg');
+          background-image: url('/static/wall.jpg');
+          background-position: center;
+          background-size: cover;
       }
     </style>
     <style>
@@ -18,15 +20,21 @@
       font-size: 15px;
       }
       form {
-      border: 5px solid #f1f1f1;
+        margin-top: 45%;
+        align-self: auto;  
+        width: 100%;
+        border: 5px solid #f1f1f1;
+        border-radius: 20px;
+        background-color: lightblue;
       }
-      input[type=text], input[type=password] {
+      input[type=email], input[type=text] {
       width: 100%;
       padding: 16px 8px;
       margin: 8px 0;
       display: inline-block;
       border: 1px solid #ccc;
       box-sizing: border-box;
+      border-radius: 10px;
       }
       button {
       background-color: #8ebf42;
@@ -72,9 +80,10 @@
       <hr/>
       <div class="container">
         <label for="email"><strong>Email ID</strong></label>
-        <input type="text" placeholder="Enter Email ID" name="email" required>
+        <input type="email" minlength="3" maxlength="30" placeholder="Enter Email ID" name="email" required>
+
         <label for="name"><strong>Name</strong></label>
-        <input type="text" placeholder="Enter Name" name="name" required>
+        <input type="text"  minlength="3" maxlength="30" placeholder="Enter Name" name="name" required>
       </div>
       <button type="submit">Reset</button>
     </form>

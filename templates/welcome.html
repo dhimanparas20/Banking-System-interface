@@ -5,21 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1026/1026658.png" type="image/icon type">
   <title>Welcome User</title>
-   
   <style>
-    *{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-header{
-width: 100vw;
-height: 100vh;
-background-image: url("https://fiduciarygovernanceblog.com/wp-content/uploads/2021/02/Triangle-Neon-Shape-GettyImages-1180473594-2048x1146.jpg");
-background-position: bottom;
-background-size: cover;
-}
-  </style>
+    body {
+      background-image: url('/static/wall.jpg');
+      background-position: center;
+      background-size: cover;
+      }
+   </style>   
+
   <style>
     #footer {
     position: fixed;
@@ -31,34 +24,64 @@ background-size: cover;
     background: transparent;
     }
   </style>
-        
+  <style>
+    .center {
+      width: auto;
+      border: 5px solid black;
+      border-radius: 20px;
+      padding: 50px;
+    } 
+    </style>
+    <style>
+      .imageContainer {
+       width:50px; 
+       height:50px; 
+       background-image: url(/static/index.png));
+       }
+
+    </style>  
+    <style>
+    .center {
+      width: auto;
+      border: 5px solid gray;
+      border-radius: 20px;
+      padding: 35px;
+      background-color: transparent;
+      text-align: left;
+    } 
+    </style>
+
 </head>
 <body>
   <header>
-    <h1 style="color: red"><img src="https://cdn-icons-png.flaticon.com/512/5579/5579832.png" width=150 height=150v>Dear <span style="color: yellow" >{{ name }}</span>,Welcome to <span style="color: paleturquoise" >MST-Bank.</span></h1><br>
-    <p style="color: greenyellow">A bank you can trust upon.<br><br>
-    </p>
-    <h2 style="color: whitesmoke">Personal Info.</h2><hr>
-    <p style="color: grey"><strong>--&gt;User Name : </strong><span style="color: yellow" >{{ name }}</span></p>
-    <p style="color: grey"><strong>--&gt;Date of Birth : </strong><span style="color: yellow" >{{ dob }}</span></p>
-    <p style="color: grey"><strong>--&gt;Current Time: </strong><span style="color: yellow" >{{ time }}</span></p>
-    <p style="color: grey"><strong>--&gt;User Api : </strong><span style="color: yellow" >{{ api }}</span></p>
-    <p style="color: grey"><strong>--&gt;Account Number : </strong><span style="color: yellow" >{{ accno }}</span></p>
-    <p style="color: grey"><strong>--&gt;Balance : </strong><span style="color: yellow" >{{ balance }}</span></p><hr>
-    <br>
-    <h2 style="color: whitesmoke">Send Money</h2><hr>
-    <p style="color: salmon"><strong>--&gt; Please click <a href="{{ url }}/send_money" target="_blank">HERE</a> to send money.</strong></p>
-    <p style="color: grey"><strong>--&gt; Last Transaction:</strong> <span style="color: white" >{{ msg }}.</span> <span style="color: gray" > <br>--> Date: </span><span style="color: white" >{{ lastdate }} </span> </p><hr>
-    <br>
-    <h2 style="color: whitesmoke">API Key Usage/handling</h2><hr>
-    <p style="color: grey"><strong>--&gt; Please click <a href="{{ url }}/reset_api" target="_blank">HERE</a> to Generate New API Key.</strong></p>
-    <p style="color: grey"><strong>--&gt;Please use the above generated API. Keep it safe and do not share it with anyone.</strong></p><hr>
-
-    <div id="footer">
-      <br>
-      <p style="color: rosybrown">A Site by MST-Production House</p>
-      <span style="color: white" >&lt;&lt;&lt; ©</span><a href="https://github.com/dhimanparas20" target="_blank">Paras Dhiman</a><span style="color: whitesmoke" >&gt;&gt;&gt</span> ;
+    <div style="font-size: 15px;">
+    <h1 style="color: red">Dear <span style="color: yellow" >{{ name }}</span>,Welcome to <span style="color: paleturquoise" >MST-Bank.</span></h1><br>
     </div>
+    <p style="color: yellow" ><font size="+2"></strong><mark>A bank you can trust upon.</mark><strong></font><br><br>
+    </p>
+    <h2 style="color: black">Personal Info.</h2>
+  <div class="center">
+    <p style="color: black"><strong>--&gt;User Name : </strong><span style="color: yellow" >{{ name }}</span></p>
+    <p style="color: black"><strong>--&gt;Date of Birth : </strong><span style="color: yellow" >{{ dob }}</span></p>
+    <p style="color: black"><strong>--&gt;Current Time: </strong><span style="color: yellow" >{{ time }}</span></p>
+    <p style="color: black"><strong>--&gt;User Api : </strong><span style="color: yellow" >{{ api }}</span></p>
+    <p style="color: black"><strong>--&gt;Account Number : </strong><span style="color: yellow" >{{ accno }}</span></p>
+    <p style="color: black"><strong>--&gt;Balance : </strong><span style="color: yellow" >{{ balance }}</span></p>
+  </div>
+  
+    <br><h2 style="color: black">Send Money</h2>
+    <div class="center">
+    <p style="color: salmon"><strong>--&gt; Please click <a href="{{ url }}/send_money" target="_blank">HERE</a> to send money.</strong></p>
+    <p style="color: black"><strong>--&gt; Last Transaction:</strong> <span style="color: white" >{{ msg }}.</span> <span style="color: black" ><br>--> Date: </span><span style="color: white" >{{ lastdate }} </span> </p>
+  </div>
+  
+    <br><h2 style="color: black">API Key Usage/handling</h2>
+    <div class="center">
+    <p style="color: black"><strong>--&gt; Please click <a href="{{ url }}/reset_api" target="_blank">HERE</a> to Generate New API Key.</strong></p>
+    <p style="color: black"><strong>--&gt;Please use the above generated API. Keep it safe and do not share it with anyone.</strong></p>
+    
+  </div>
+  </div>
   </header>    
 
 </body></html>

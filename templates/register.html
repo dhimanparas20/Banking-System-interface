@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <style>
         body {
-          background-image: url('https://fiduciarygovernanceblog.com/wp-content/uploads/2021/02/Triangle-Neon-Shape-GettyImages-1180473594-2048x1146.jpg');
+          background-image: url('/static/wall.jpg');
+          background-position: center;
+          background-size: cover;
           }
     </style>      
     </style>
@@ -97,7 +99,7 @@
       input[type=radio]:checked + label:after {
       opacity: 1;
       }
-      input[type=text], input[type=password] {
+      input[type=text],input[type=date],input[type=email], input[type=password] {
       width: calc(100% - 57px);
       height: 36px;
       margin: 13px 0 0 -5px;
@@ -144,18 +146,21 @@
       <form action="/register_done" action="#" method="post">
         <hr>
         <label id="icon" for="name"><i class="fas fa-user"></i></label>
-        <input type="text" name="name" id="name" placeholder="Name" required/><hr>
+        <input type="text" minlength="4" maxlength="30" name="name" id="name" placeholder="Name" required/>
+
         <label id="icon" for="name"><i class="fa fa-birthday-cake" aria-hidden="true"></i></label>
-        <input type="date" name="dob" id="dob"  required/><hr>
-        <label id="icon" for="name"><i class="fas fa-envelope"></i></label>
-        <input type="text" name="email" id="name" placeholder="Email" required/>
+        <input type="date" min="1952-01-01" max="2004-01-01" name="dob" id="dob"  required/>
+
+        <label id="icon" for="name"><i class="fa fa-envelope" style="font-size:15px"></i></label>
+        <input type="email" name="email" id="name" placeholder="Email" required/>
+
         <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
-        <input type="password" name="pass" id="name" placeholder="Password" required/> 
-        <hr>
+        <input type="password" minlength="8" maxlength="20" name="pass" id="name" placeholder="Password" required/> 
+
         <div class="gender">
           <input type="radio" value="male" id="male" name="gender" checked/>
           <label for="male" class="radio">Male</label>
-          <input type="radio" value="female" id="female" name="gender" />
+          <input type="radio" value="female" id="female" name="gender" required/>
           <label for="female" class="radio">Female</label>
         </div>
         <hr>
