@@ -53,7 +53,7 @@ def gen_api():
   upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   number = "0123456789"
   all = lower + upper + number 
-  api= "".join(random.sample(all, 15))
+  api= "".join(random.sample(all, 10))
   return (api)
 
 # Generate account number for user
